@@ -13,7 +13,6 @@ document.getElementById("submitBtn").addEventListener("click", function() {
 
     axios.post('/api/save-data', formData)
         .then(response => {
-            console.log('Response received:', response);
             alert(response.data.message); // Display the success message from the server
             fetchAndDisplayexpenses(); // Refresh the expense list after data is saved
         })
@@ -21,7 +20,7 @@ document.getElementById("submitBtn").addEventListener("click", function() {
             console.error('Error saving data: ', error);
         });
 
-        alert('item added successfully')
+       
 });
 
 // expense Deletion Functionality
@@ -37,7 +36,7 @@ function deleteexpense(expenseId) {
             console.error('Error deleting expense: ', error);
         });
        
-       //alert('deleted successfully') 
+    
        
 }
 
